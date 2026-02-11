@@ -1,7 +1,5 @@
 import asyncio
 import os
-import os 
-from dotenv import load_dotenv
 import re
 import sqlite3
 from datetime import datetime, timedelta
@@ -16,7 +14,7 @@ from telegram.ext import (
     ContextTypes,
 )
 
-load_dotenv()
+
 
 # Новый путь к файлу базы данных
 db_path = os.path.abspath('asalo_steam.db.sqlite')
@@ -527,7 +525,7 @@ async def phone(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Основная логика запуска приложения
 
 def main():
-    TOKEN = os.getenv("TG_BOT_TOKEN")
+    TOKEN = '8445282598:AAFTp5xnUIU49x3bRxNTbGMYcX3c_0xCKkU'
     app = Application.builder().token(TOKEN).build()
 
     # Зарегистрируем команду очистки базы данных
